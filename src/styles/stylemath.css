@@ -1,0 +1,46 @@
+
+
+
+.wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: center;
+    row-gap: 20px;
+    
+}
+
+.games-item {
+    grid-column: span 4;
+
+}
+
+.games-item:nth-child(4) {
+    grid-column: 3 / 6;
+}
+
+
+.games-item:nth-child(5) {
+    grid-column: 7 / 12;
+}
+
+.games-item a img {
+    width: 220px;
+    height: 220px; 
+}
+
+.game-item-description {
+    text-align: center ;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.66);
+}
+.games-item-img {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+}
