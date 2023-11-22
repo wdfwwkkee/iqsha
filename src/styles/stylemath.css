@@ -1,11 +1,7 @@
-
-
-
-.wrapper {
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 0 15px;
+.games-list {
+    margin-top: 100px;
 }
+
 .game-list {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -35,7 +31,7 @@
 
 .game-item-description {
     text-align: center ;
-    text-decoration: none;
+    font-weight: 600;
     color: rgba(0, 0, 0, 0.66);
 }
 .games-item-img {
@@ -43,4 +39,8 @@
     border-radius: 20px;
     background-color: #FFFFFF;
     margin-bottom: 20px;
+}
+
+.games-item-img:hover {
+    transform: translateY(-5px);
 }
