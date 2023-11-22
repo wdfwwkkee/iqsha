@@ -1,0 +1,39 @@
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+    justify-items: center;
+}
+
+
+.logic-game {
+    margin-top: 100px;
+}
+
+.game-item {
+    max-width: 250px;
+    grid-column: span 2;
+}
+
+.game-item-img {
+    box-shadow: 10px 5px 20px -1px #39414b;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.game-item-img:hover {
+    transform: translateY(-5px);
+}
+
+.game-item-text {
+    color: #39414b;
+    font-weight: 600;
+    text-align: center;
+}
