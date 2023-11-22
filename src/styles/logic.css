@@ -1,6 +1,7 @@
 .game-item {
     width: 300px;
     height: 300px;
+    grid-column: span 6;
 }
 
 .game-item-img img {
@@ -25,17 +26,14 @@
     transform: translateY(-5px);
 }
 
-
-.game-item {
-    grid-column: span 6;
-}
-
 .game-item:last-child {
     grid-column: 5 / 9;
 }
 
 .game-item-txt {
     text-align: center;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.66);
 }
 
 .games-list {
@@ -43,9 +41,4 @@
     row-gap: 50px;
     justify-items: center;
     grid-template-columns: repeat(12, 1fr);
-}
-
-.game-item-txt {
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.66);
 }
