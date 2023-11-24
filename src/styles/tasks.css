@@ -1,0 +1,94 @@
+
+.btn-close-game {
+    color: black;
+    font-size: 50px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+}
+
+
+
+.btn-close-game:hover {
+    background-color: rgba(128, 128, 128, 0.259);
+}
+
+.correct {
+    font-size: 30px;
+    font-weight: 600;
+    transition: all .0001s;
+
+}
+
+
+.counter {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+.container {
+    min-width: 100px;
+    min-height: 160px;
+    font-size: 100px;
+    padding: 20px;
+    font-weight: 600;
+    user-select: none;
+
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer {
+    border: dashed 5px red;
+}
+
+
+.variants-content {
+    display: grid;
+}
+
+
+.var-btn {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px 200px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.variants-content {
+    display: grid;
+    justify-items: center;
+    row-gap: 50px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.var {
+    grid-column: span 6;
+}
+
+.variants.section {
+    margin-top: 200px;
+}
