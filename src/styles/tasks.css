@@ -23,6 +23,26 @@
 }
 
 
+.button-next{
+    margin-top: 50px;
+    text-align: end;
+}
+
+
+.nextBtn {
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    background: white;
+    padding: 15px 40px;
+    display: none;
+}
+
+.nextBtn:hover {
+    transform: scale(1.1);
+}
+
 .counter {
     font-size: 20px;
     font-weight: 700;
@@ -90,5 +110,5 @@
 }
 
 .variants.section {
-    margin-top: 200px;
+    margin-top: 100px;
 }
