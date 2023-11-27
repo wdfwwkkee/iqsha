@@ -1,7 +1,4 @@
 
-
-
-
 // Основные переменные
 next = document.getElementById('next');
 counter = document.querySelector('.counter');
@@ -16,6 +13,7 @@ function rand() {
     return(x)
 }
 
+//Функция перехода на след. уровень
 function nextLevel() {
     st = rand();
     nd = rand();
@@ -40,12 +38,12 @@ if (!cookieStorage.getItem('counter'))
 
 setInterval(() => {
     cookieStorage.setItem('counter', parseInt(counter.innerText))
-}, 1000);
+}, 10000);
 
 //Установка из хранилища
 counter.innerHTML = counter.innerText = cookieStorage.getItem('counter');
 
-//Кнопка и событие
+//Кнопки цифр и их событие
 answerBtn.forEach((el)=> {
     el.addEventListener('click', () => {
         if (parseInt(firstNum.innerText) + parseInt(secondaryNum.innerText) === parseInt(el.innerText)) {
@@ -63,6 +61,7 @@ answerBtn.forEach((el)=> {
     })
 })
 
+//Кнопка перехода на след. ур
 next.addEventListener('click', () => {
     next.style.display = 'none';
     nextLevel();
