@@ -27,7 +27,7 @@ function nextLevel() {
 }
 
 //Функция победы
-function win(){
+function win(el){
     console.log("win");
     correct.innerHTML = 'Правильно';
     correct.style.color = "Green";
@@ -60,7 +60,7 @@ answerBtn.forEach((el)=> {
     el.addEventListener('click', () => {
         if (el.innerText === ">"){
             if (parseInt(firstNum.innerText) > parseInt(secondaryNum.innerText) === true) {
-                win()
+                win(el)
             }
             else {
                 lose()
@@ -68,7 +68,7 @@ answerBtn.forEach((el)=> {
         }        
         else {
             if (parseInt(firstNum.innerText) < parseInt(secondaryNum.innerText) === true) {
-                win()
+                win(el)
             }
             else {
                 lose()
