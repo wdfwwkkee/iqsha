@@ -1,0 +1,161 @@
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.background {
+    background: url(../images/moreles.JPG);
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: gray;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000063;
+    z-index: 0;
+}
+
+.btn-close-game {
+    color: black;
+    font-size: 50px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+}
+
+
+.task {
+    display: inline-flex;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+
+.btn-close-game:hover {
+    background-color: rgba(128, 128, 128, 0.259);
+}
+
+.correct {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    transition: all .0001s;
+
+}
+
+
+.button-next{
+    margin-top: 50px;
+    text-align: end;
+}
+
+
+.nextBtn {
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    background: white;
+    padding: 15px 40px;
+    display: none;
+}
+
+.nextBtn:hover {
+    transform: scale(1.1);
+}
+
+.counter {
+
+    background: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.section {
+    padding-top: 100px;
+}
+
+
+.main-content {
+    text-align: center;
+}
+
+.container {
+    min-width: 100px;
+    min-height: 160px;
+    font-size: 100px;
+    padding: 20px;
+    font-weight: 600;
+    user-select: none;
+
+}
+
+.task {
+    justify-content: center;
+    align-items: center;
+}
+
+.answer {
+    border: dashed 5px red;
+    border-radius: 10px;
+    font-size: 90px;
+}
+
+
+.variants-content {
+    display: grid;
+}
+
+
+.var-btn {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px 200px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.variants-content {
+    display: grid;
+    justify-items: center;
+    row-gap: 50px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.var {
+    grid-column: span 6;
+}

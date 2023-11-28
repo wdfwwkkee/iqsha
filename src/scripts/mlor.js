@@ -30,7 +30,7 @@ function nextLevel() {
 function win(el){
     console.log("win");
     correct.innerHTML = 'Правильно';
-    correct.style.color = "Green";
+    correct.style.backgroundColor = "#2fd82f";
     counter.innerHTML = counter.innerText = parseInt(document.getElementById("counter").innerText) + 1;
     next.style.display = 'inline';
     document.getElementById("answer-box").innerHTML = document.getElementById("answer-box").innerText = el.innerText;
@@ -38,7 +38,7 @@ function win(el){
 
 //Функция поражения
 function lose(){
-    correct.style.color = "Red";
+    correct.style.backgroundColor = "#ff2727";
     correct.innerHTML = 'Неправильно';
 }
 
