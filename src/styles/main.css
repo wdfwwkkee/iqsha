@@ -8,6 +8,9 @@ body {
     background: #edf6ff;
 }
 
+.Answer {
+    transition: none;
+}
 
 a {
     padding: 0;

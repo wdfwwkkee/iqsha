@@ -9,7 +9,7 @@ answerBtn = document.querySelectorAll(".var-btn");
 
 //Функция рандома
 function rand() {
-    x = Math.ceil(Math.random(10) * 10)
+    x = Math.ceil(Math.random() * 10)
     return(x)
 }
 
@@ -17,7 +17,7 @@ function rand() {
 function nextLevel() {
     st = rand();
     nd = rand();
-    nextbtnanswer = Math.ceil((Math.ceil(Math.random(0.5) * 10)) / 2.5);            
+    nextbtnanswer = Math.ceil((Math.ceil(Math.random() * 10)) / 2.5);            
     firstNum.innerText = st;
     document.getElementById("1st").innerHTML = st;
     secondaryNum.innerText = nd;
