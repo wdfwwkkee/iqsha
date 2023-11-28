@@ -40,6 +40,7 @@ function win(el){
 function lose(){
     correct.style.backgroundColor = "#ff2727";
     correct.innerHTML = 'Неправильно';
+    next.style.display = 'none';
 }
 
 //Сохранение правильных ответов
