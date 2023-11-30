@@ -49,21 +49,33 @@ answerBtn.forEach((el)=> {
         if (parseInt(firstNum.innerText) + parseInt(secondaryNum.innerText) === parseInt(el.innerText)) {
             console.log("win");
             correct.innerHTML = 'Правильно';
-            correct.style.color = "Green";
+            correct.style.color = "white";
+            correct.style.backgroundColor = "Green";
+            correct.style.display = 'block';
             counter.innerHTML = counter.innerText = parseInt(document.getElementById("counter").innerText) + 1;
             next.style.display = 'inline';
             document.getElementById("answer-box").innerHTML = document.getElementById("answer-box").innerText = parseInt(el.innerText);
+            answerBtn.forEach((el) => {
+                el.disabled = true;
+            })
         }
         else {
-            correct.style.color = "Red";
+            correct.style.color = "white";
             correct.innerHTML = 'Неправильно';
+            correct.style.color = "white";
+            correct.style.backgroundColor = "Red";
+            correct.style.display = 'block';
         }
     })
 })
 
 //Кнопка перехода на след. ур
 next.addEventListener('click', () => {
+    answerBtn.forEach((el) => {
+        el.disabled = false;
+    })
     next.style.display = 'none';
+    correct.style.display = 'none';
     nextLevel();
     document.getElementById("answer-box").innerHTML = document.getElementById("answer-box").innerText = ""  ;
 })

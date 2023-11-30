@@ -7,7 +7,7 @@ body {
 
 
 .background {
-    background: url(../images/02102b3ce119e698bdbd0299b13ac3cd.JPG);
+    background: url(../images/mathematics-with-numbers-copy-space-empty-notepad.jpg);
     position: absolute;
     background-size: cover;
     background-position: center;
@@ -43,15 +43,32 @@ body {
 }
 
 
-.btn-close-game:hover {
-    background-color: rgba(128, 128, 128, 0.259);
+
+.main-content {
+    text-align: center;
 }
+
+
+.task-01 {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 30px;
+}
+
 
 .correct {
     font-size: 30px;
+    border-radius: 20px;
+    padding: 10px 20px;
     font-weight: 600;
     transition: all .0001s;
 
+}
+
+.counter {
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 
@@ -104,7 +121,7 @@ body {
 }
 
 .task {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
@@ -138,8 +155,4 @@ body {
 
 .var {
     grid-column: span 6;
-}
-
-.variants.section {
-    margin-top: 100px;
 }

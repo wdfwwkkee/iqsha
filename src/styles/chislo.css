@@ -139,6 +139,10 @@ body {
 }
 
 
+.btn-close-game:hover {
+    background: rgb(159, 158, 158);
+}
+
 .task {
     font-size: 30px;
     padding: 20px 25px;

@@ -62,7 +62,7 @@ answerBtn.forEach((el)=> {
         if (el.innerText === ">"){
             if (parseInt(firstNum.innerText) > parseInt(secondaryNum.innerText) === true) {
                 win(el)
-            }
+            }   
             else {
                 lose()
             }

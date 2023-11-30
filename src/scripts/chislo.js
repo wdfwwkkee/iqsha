@@ -10,34 +10,38 @@ answerBtn = document.querySelectorAll(".var-btn");
 function rand() {
     x = Math.ceil(Math.random() * 15)
     return(x);
-}
+};
 
 //Функция перехода на след. уровень
 function nextLevel() {
     quest = rand();
-    document.getElementById('quest').innerHTML = quest;
-}
+    document.getElementById('quest').innerText = "";
+    document.getElementById('quest').innerHTML = Number(quest);
+    correct.style.display = 'none'; 
+};
 
 //Функция победы
 function win(){
     console.log("win");
+    correct.style.display = 'block'; 
     correct.innerHTML = 'Правильно';
     correct.style.backgroundColor = "#2fd82f";
     counter.innerHTML = counter.innerText = parseInt(document.getElementById("counter").innerText) + 1;
     next.style.display = 'inline';
-}
+};
 
 
 
 //Функция поражения
 function lose(){
+    correct.style.display = 'block'; 
     correct.style.backgroundColor = "#ff2727";
     correct.innerHTML = 'Неправильно';
     next.style.display = 'none';
-}
+};
 
 //Сохранение правильных ответов
-cookieStorage = window.localStorage
+cookieStorage = window.localStorage;
 
 if (!cookieStorage.getItem('counter'))
     cookieStorage.setItem('counter', '0')
@@ -53,29 +57,29 @@ counter.innerHTML = counter.innerText = cookieStorage.getItem('counter');
 answerBtn.forEach((el)=> {
     el.addEventListener('click', () => {
         if (el.innerText === "Число") {
-            if (parseInt(quest.innerText) > 9) {
+            if (parseInt(quest.innerText) > Number(9) === true) {
                 win();
             }
             else {
-                console.log("none");
+                lose();
             }
         }
         else if (el.innerText === "Цифра") {
-            if (parseInt(quest.innerText)  < 10) {
+            if (parseInt(quest.innerText) < Number(10) === true) {
                 win();
             }
             else {
-                console.log("none2")
+                lose();
             }
         }
-        if (el.innerText === "Количество") {
-            console.log("asd3")
+        else if (el.innerText === "Количество") {
+            lose();
         }
     })
-})
+});
 
 //Кнопка перехода на след. ур
 next.addEventListener('click', () => {
     next.style.display = 'none';
     nextLevel();
-})
+});
