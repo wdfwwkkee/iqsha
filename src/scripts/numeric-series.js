@@ -3,7 +3,8 @@
 next = document.getElementById('next');
 counter = document.querySelector('.counter');
 correct = document.querySelector('.correct');
-answerBtn = document.querySelectorAll(".var-btn");
+answerBtn = document.querySelectorAll(".var");
+answerBox = document.querySelectorAll(".answer");
 
 //Функция рандома
 function rand() {
@@ -58,26 +59,81 @@ setInterval(() => {
 counter.innerHTML = counter.innerText = cookieStorage.getItem('counter');
 
 //Кнопки цифр и их событие
-answerBtn.forEach((el)=> {
-    el.addEventListener('click', () => {
-        if (el.innerText === "1"){
-            if (parseInt(firstNum.innerText) > parseInt(secondaryNum.innerText) === true) {
-                win(el)
-            }
-            else {
-                lose()
-            }
-        }        
-        else {
-            if (parseInt(firstNum.innerText) < parseInt(secondaryNum.innerText) === true) {
-                win(el)
-            }
-            else {
-                lose()
-            }                       
-        } 
-    })
-})
+
+$("#el1").draggable({revert: "invalid"}, {snap: ".answer" , snapMode: "inner"});
+$("#el2").draggable({revert: "invalid"});
+$("#el3").draggable({revert: "invalid"});
+$("#el4").draggable({revert: "invalid"});
+$("#el5").draggable({revert: "invalid"});
+$("#el6").draggable({revert: "invalid"});
+$("#el7").draggable({revert: "invalid"});
+$("#el8").draggable({revert: "invalid"});
+$("#el9").draggable({revert: "invalid"});
+$("#el10").draggable({revert: "invalid"});
+
+
+$("#droppable1").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+$("#droppable2").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+
+$("#droppable3").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+
+$("#droppable4").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+
+$("#droppable5").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+$("#droppable6").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+$("#droppable7").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+
+$("#droppable8").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+
+$("#droppable9").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+
+$("#droppable10").droppable({
+    drop:function(event, ui){
+      $(this).addClass("ui-state-highlight")
+    }
+});
+
+
+
+
+
+
 
 //Кнопка перехода на след. ур
 next.addEventListener('click', () => {
