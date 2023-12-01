@@ -4,7 +4,11 @@ body {
     margin: 0;
 }
 
-
+.main-title {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 30px;
+}
 
 .background {
     background: url(../images/mathematics-with-numbers-copy-space-empty-notepad.jpg);
@@ -106,7 +110,7 @@ body {
 
 
 .section {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 
@@ -155,4 +159,19 @@ body {
 
 .var {
     grid-column: span 6;
+}
+
+
+@media (max-width:900px) {
+    .var-btn {
+        padding: 20px 150px;
+    }
+
+    .variants-content {
+        row-gap: 10px;
+    }
+
+    .var {
+        grid-column: span 6;
+    }
 }

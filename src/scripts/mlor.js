@@ -59,6 +59,7 @@ counter.innerHTML = counter.innerText = cookieStorage.getItem('counter');
 //Кнопки цифр и их событие
 answerBtn.forEach((el)=> {
     el.addEventListener('click', () => {
+        correct.style.display = 'block';
         if (el.innerText === ">"){
             if (parseInt(firstNum.innerText) > parseInt(secondaryNum.innerText) === true) {
                 win(el)
@@ -82,5 +83,6 @@ answerBtn.forEach((el)=> {
 next.addEventListener('click', () => {
     next.style.display = 'none';
     nextLevel();
+    correct.style.display = 'none';
     document.getElementById("answer-box").innerHTML = document.getElementById("answer-box").innerText = ""  ;
 })

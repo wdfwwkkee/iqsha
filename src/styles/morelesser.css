@@ -5,6 +5,13 @@ body {
 }
 
 
+.main-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+}
+
 
 .background {
     background: url(../images/moreles.jpg);
@@ -104,7 +111,7 @@ body {
 
 
 .section {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 
@@ -158,4 +165,12 @@ body {
 
 .var {
     grid-column: span 6;
+}
+
+
+@media (max-width:900px) {
+    .variants-content {
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 25px;
+    }
 }
