@@ -60,6 +60,7 @@ img {
     max-height: 200px;
 
 }
+
 .header-list-item-img:hover {
     transform: translateY(-5px);
 }
@@ -92,4 +93,26 @@ img {
 
 .header-list-item:nth-child(5) {
     grid-column: 7/12;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .header-list-item-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header-list-item {
+        grid-column: span 6;
+    }
+
+    .header-list-item:nth-child(4) {
+        grid-column: span 6;
+    }
+
+    .header-list-item:nth-child(5) {
+        grid-column: span 6;
+    }
 }
