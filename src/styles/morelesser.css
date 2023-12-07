@@ -166,6 +166,13 @@ body {
 }
 
 
+
+.audio-img {
+    width: 100px;
+    height: 100px;
+}
+
+
 @media (max-width:900px) {
     .variants-content {
         grid-template-columns: repeat(6, 1fr);

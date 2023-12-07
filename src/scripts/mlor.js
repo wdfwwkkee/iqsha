@@ -63,6 +63,9 @@ answerBtn.forEach((el)=> {
         if (el.innerText === ">"){
             if (parseInt(firstNum.innerText) > parseInt(secondaryNum.innerText) === true) {
                 win(el)
+                answerBtn.forEach((el)=> {
+                    el.disabled = true;
+                })
             }   
             else {
                 lose()
@@ -71,6 +74,9 @@ answerBtn.forEach((el)=> {
         else {
             if (parseInt(firstNum.innerText) < parseInt(secondaryNum.innerText) === true) {
                 win(el)
+                answerBtn.forEach((el)=> {
+                    el.disabled = true;
+                })
             }
             else {
                 lose()
@@ -85,4 +91,7 @@ next.addEventListener('click', () => {
     nextLevel();
     correct.style.display = 'none';
     document.getElementById("answer-box").innerHTML = document.getElementById("answer-box").innerText = ""  ;
+    answerBtn.forEach((el)=> {
+        el.disabled = false;
+    })
 })
